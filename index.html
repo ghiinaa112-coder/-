@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>بطاقة</title>
+
+<style>
+body {
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: red;
+  font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <img src="card.png">
+  <div class="name" id="name"></div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name") || "اكتب اسمك";
+document.getElementById("name").innerText = name;
+</script>
+
+</body>
+</html>
